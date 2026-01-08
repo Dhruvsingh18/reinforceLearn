@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+.curriculum-page {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #0f172a;
+  background: #f9fbff;
+  min-height: 100vh;
+}
+
+/* ---------- NAVBAR ---------- */
+.curriculum-nav {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 50;
+}
+
+.curriculum-nav .nav-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.curriculum-nav .nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.curriculum-nav .nav-links a:hover {
+  color: #2563eb;
+}
+
+.curriculum-nav .nav-links .active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* ---------- HERO ---------- */
+.curriculum-hero {
+  text-align: center;
+  padding: 6rem 8%;
+}
+
+.curriculum-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.curriculum-hero p {
+  font-size: 1.05rem;
+  color: #475569;
+}
+
+/* ---------- TOPICS GRID ---------- */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 4rem 8%;
+}
+
+.topic-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+}
+
+.topic-card h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: #2563eb;
+}
+
+.topic-card p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* ---------- ARROW LINK ---------- */
+.arrow-link {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.arrow-link:hover {
+  transform: translateX(5px);
+  color: #1e40af;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.register-btn {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  color: #ffffff !important;
+  padding: 0.65rem 1.6rem;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow / animated gradient overlay */
+.register-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 210%;
+  height: 225%;
+  background: linear-gradient(60deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0;
+  border-radius: 14px;
+}
+
+/* Hover effect */
+.register-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.45);
+}
+
+.register-btn:hover::before {
+  transform: rotate(45deg) scale(1);
+}
+
+/* Ensure text stays above hover overlay */
+.register-btn span {
+  position: relative;
+  z-index: 1;
+}
