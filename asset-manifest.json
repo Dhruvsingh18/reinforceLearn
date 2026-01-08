@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/nexara/static/css/main.14f1a971.css",
-    "main.js": "/nexara/static/js/main.c8c73866.js",
+    "main.js": "/nexara/static/js/main.5dda4904.js",
     "static/js/453.b43ffe64.chunk.js": "/nexara/static/js/453.b43ffe64.chunk.js",
     "index.html": "/nexara/index.html",
     "main.14f1a971.css.map": "/nexara/static/css/main.14f1a971.css.map",
-    "main.c8c73866.js.map": "/nexara/static/js/main.c8c73866.js.map",
+    "main.5dda4904.js.map": "/nexara/static/js/main.5dda4904.js.map",
     "453.b43ffe64.chunk.js.map": "/nexara/static/js/453.b43ffe64.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14f1a971.css",
-    "static/js/main.c8c73866.js"
+    "static/js/main.5dda4904.js"
   ]
 }
