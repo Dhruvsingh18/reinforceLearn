@@ -41,17 +41,24 @@ export default function FAQSection() {
   return (
     <div className="faq-page">
       {/* NAVBAR */}
-      <nav className="about-nav">
-        <div className="nav-logo">RL Explorer</div>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/curriculum">Curriculum</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/contact">Contact</Link>
-          <a href="/register" className="register-btn">
-  <span>Register</span>
-</a>
+      <nav className="flex justify-between items-center px-10 py-6 border-b border-slate-200">
+        <div className="text-2xl font-extrabold tracking-tight">
+          Reinforce<span className="text-purple-600">Learn</span>
+        </div>
+
+        <div className="flex gap-8 items-center text-sm font-medium">
+          <Link to="/" className="hover:text-purple-600 transition">Home</Link>
+          <Link to="/about" className="hover:text-purple-600 transition">About</Link>
+          <Link to="/curriculum" className="text-purple-600 font-semibold">Curriculum</Link>
+          <Link to="/faq" className="hover:text-purple-600 transition">FAQ</Link>
+          <Link to="/contact" className="hover:text-purple-600 transition">Contact</Link>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfg_XnvHbtXL7DIj9r5IzR5sFTLEaBDjG_36csNadD_ZBGS8g/viewform?usp=sharing&ouid=115457538230363493907"
+            className="bg-purple-600 text-white px-5 py-2 rounded-full shadow hover:bg-purple-700 transition"
+          >
+            Register
+          </a>
         </div>
       </nav>
 
@@ -77,6 +84,10 @@ export default function FAQSection() {
           </div>
         ))}
       </section>
+
+      <footer className="about-footer">
+        © {new Date().getFullYear()} ReinforceLearn — Reinforcement Learning, Reimagined.
+      </footer>
     </div>
   );
 }

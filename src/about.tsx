@@ -1,38 +1,47 @@
 import "./about.css";
 import { Link } from "react-router-dom";
 
-
 export default function AboutPage() {
   return (
     <div className="about-page">
 
-      {/* NAVBAR */}
-      <nav className="about-nav">
-        <div className="nav-logo">RL Explorer</div>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/curriculum">Curriculum</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/contact">Contact</Link>
-          <a href="/register" className="register-btn">
-  <span>Register</span>
-</a>
-        </div>
-      </nav>
+     
+           {/* NAVBAR */}
+           <nav className="flex justify-between items-center px-10 py-6 border-b border-slate-200">
+             <div className="text-2xl font-extrabold tracking-tight">
+               Reinforce<span className="text-purple-600">Learn</span>
+             </div>
+     
+             <div className="flex gap-8 items-center text-sm font-medium">
+               <Link to="/" className="hover:text-purple-600 transition">Home</Link>
+               <Link to="/about" className="hover:text-purple-600 transition">About</Link>
+               <Link to="/curriculum" className="hover:text-purple-600 transition">Curriculum</Link>
+               <Link to="/faq" className="hover:text-purple-600 transition">FAQ</Link>
+               <Link to="/contact" className="hover:text-purple-600 transition">Contact</Link>
+     
+               <a
+                 href="https://docs.google.com/forms/d/e/1FAIpQLSfg_XnvHbtXL7DIj9r5IzR5sFTLEaBDjG_36csNadD_ZBGS8g/viewform?usp=sharing&ouid=115457538230363493907"
+                 className="bg-purple-600 text-white px-5 py-2 rounded-full shadow hover:bg-purple-700 transition"
+               >
+                 Register
+               </a>
+             </div>
+           </nav>
 
       {/* HERO */}
       <section className="about-hero">
         <div className="hero-text">
-          <h1>About RL Explorer</h1>
+          <h1>
+            About <span>ReinforceLearn</span>
+          </h1>
           <p>
-            We build intuitive tools for reinforcement learning — focused on
-            robotics, autonomy, and real-world intelligence.
+            We design modern tools that make reinforcement learning intuitive,
+            visual, and accessible for students, engineers, and researchers.
           </p>
         </div>
 
         <div className="hero-image-placeholder">
-          Product / Diagram / Visual
+          Platform Preview
         </div>
       </section>
 
@@ -48,70 +57,86 @@ export default function AboutPage() {
         </div>
         <div className="stat">
           <h3>$75K</h3>
-          <p>Research Funding Raised</p>
+          <p>Research Funding</p>
         </div>
         <div className="stat">
           <h3>14</h3>
           <p>Active Projects</p>
         </div>
       </section>
-
-      {/* CONTENT (Improved) */}
+      
+      {/* CONTENT */}
       <section className="about-content">
-        <div className="content-card modern-card">
+
+        <div className="content-card">
           <h2>Our Mission</h2>
           <p>
-            We aim to make reinforcement learning intuitive and accessible. Our
-            tools empower engineers, students, and researchers to see AI in
-            action, test scenarios, and innovate confidently.
+            Our goal is to simplify reinforcement learning and make it accessible
+            to the next generation of innovators.
           </p>
           <ul>
-            <li>Interactive simulations for learning and research</li>
-            <li>Clear visualizations of agent decisions</li>
-            <li>Easy-to-use interfaces with real-world focus</li>
+            <li>Visual simulations of intelligent agents</li>
+            <li>Hands-on learning for students</li>
+            <li>Real-world robotics applications</li>
           </ul>
         </div>
 
-        <div className="content-card modern-card outlined">
+        <div className="content-card outlined">
           <h2>What We Focus On</h2>
-          <ul className="focus-list">
-            <li>
-              <strong>Robotics & Autonomy:</strong> Tools for real and simulated robots.
-            </li>
-            <li>
-              <strong>Visualization:</strong> Understand AI behavior in real-time.
-            </li>
-            <li>
-              <strong>Accessibility:</strong> Complex systems, simplified for everyone.
-            </li>
-            <li>
-              <strong>Innovation:</strong> Cutting-edge methods for modern research.
-            </li>
+          <ul>
+            <li><strong>Robotics</strong> — real + simulated systems</li>
+            <li><strong>Visualization</strong> — understand AI behavior</li>
+            <li><strong>Accessibility</strong> — beginner-friendly tools</li>
+            <li><strong>Research</strong> — modern RL pipelines</li>
           </ul>
         </div>
+
       </section>
 
-      {/* TEAM (Improved) */}
-      <section className="about-team">
-        <h2>Meet the Team</h2>
+      {/* WORK */}
+      <section className="about-work">
+        <h2>Our Work</h2>
+        <p className="work-subtitle">
+          Projects that combine education, AI, and real-world impact.
+        </p>
 
-        <div className="team-grid">
-          {Array.from({ length: 8 }).map((_, i) => (
-            <div className="team-card" key={i}>
-              <div className="team-image-placeholder">
-                {/* Replace with real image */}
-                <img
-                  src={`/team/member${i + 1}.jpg`}
-                  alt={`Team member ${i + 1}`}
-                  className="team-image"
-                />
-              </div>
-              <h4>Member {i + 1}</h4>
-              <p className="role-badge">Role / Specialty</p>
-            </div>
-          ))}
+        <div className="work-grid">
+
+          <div className="work-card">
+            <div className="work-icon"></div>
+            <h3>RL Explorer</h3>
+            <p>
+              A live RL platform where users can train, visualize, and debug agents.
+            </p>
+            <ul>
+              <li>Real-time visualization</li>
+              <li>Custom environments</li>
+              <li>Simple UI</li>
+            </ul>
+            <a href="#" className="work-btn">View Project</a>
+          </div>
+
+          <div className="work-card featured">
+            <div className="work-icon"></div>
+            <h3>Gear Forward</h3>
+            <p>
+              Expanding robotics and AI education access to underserved students.
+            </p>
+            <ul>
+              <li>STEM education</li>
+              <li>Community outreach</li>
+              <li>Global impact</li>
+            </ul>
+            <a href="#" className="work-btn outline">Learn More</a>
+          </div>
+
         </div>
       </section>
+
+      {/* FOOTER */}
+      <footer className="about-footer">
+        © {new Date().getFullYear()} ReinforceLearn — Reinforcement Learning, Reimagined.
+      </footer>
 
     </div>
   );

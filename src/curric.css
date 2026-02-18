@@ -1,18 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 .curriculum-page {
   font-family: "Inter", system-ui, sans-serif;
   color: #0f172a;
-  background: #f9fbff;
+  background: linear-gradient(180deg, #f6f4ff, #ffffff);
   min-height: 100vh;
 }
 
-/* ---------- NAVBAR ---------- */
+/* =========================
+   NAVBAR
+========================= */
+
 .curriculum-nav {
   position: sticky;
   top: 0;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ececff;
   padding: 1rem 8%;
   display: flex;
   justify-content: space-between;
@@ -20,154 +24,240 @@
   z-index: 50;
 }
 
-.curriculum-nav .nav-logo {
-  font-weight: 700;
-  font-size: 1.2rem;
+.nav-logo {
+  font-weight: 800;
+  font-size: 1.4rem;
   letter-spacing: -0.02em;
 }
 
-.curriculum-nav .nav-links a {
+.nav-logo span {
+  color: #7c3aed;
+}
+
+.nav-links a {
   margin-left: 2rem;
   text-decoration: none;
   color: #475569;
   font-weight: 500;
-  transition: color 0.15s ease;
+  transition: all 0.2s ease;
 }
 
-.curriculum-nav .nav-links a:hover {
-  color: #2563eb;
+.nav-links a:hover {
+  color: #7c3aed;
 }
 
-.curriculum-nav .nav-links .active {
-  color: #2563eb;
+.nav-links .active {
+  color: #7c3aed;
   font-weight: 600;
 }
 
-/* ---------- HERO ---------- */
+/* REGISTER BUTTON */
+
+.register-btn {
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
+  color: #ffffff !important;
+  padding: 0.6rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.35);
+}
+
+/* =========================
+   HERO
+========================= */
+
 .curriculum-hero {
+  padding: 6rem 2rem 3rem;
   text-align: center;
-  padding: 6rem 8%;
+  background: radial-gradient(circle at top, #ede9fe, #f6f4ff);
 }
 
 .curriculum-hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.7rem;
   font-weight: 800;
-  color: #1e3a8a;
+  background: linear-gradient(90deg, #6d28d9, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
 }
 
 .curriculum-hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #5b5f7a;
   font-size: 1.05rem;
-  color: #475569;
 }
 
-/* ---------- TOPICS GRID ---------- */
+/* =========================
+   TOPICS GRID
+========================= */
+
 .topics-grid {
+  padding: 4rem 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  padding: 4rem 8%;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .topic-card {
   background: white;
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  border-radius: 22px;
+  padding: 2rem 1.8rem;
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.08);
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .topic-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.18);
 }
 
 .topic-card h3 {
+  color: #6d28d9;
+  margin-bottom: 0.6rem;
   font-weight: 700;
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
-  color: #2563eb;
 }
 
 .topic-card p {
-  color: #475569;
+  color: #5b5f7a;
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
-/* ---------- ARROW LINK ---------- */
+/* ARROW LINK */
+
 .arrow-link {
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  right: 18px;
+  bottom: 18px;
   font-size: 1.5rem;
-  color: #2563eb;
-  font-weight: 700;
+  color: #7c3aed;
   text-decoration: none;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.25s ease;
 }
 
 .arrow-link:hover {
   transform: translateX(5px);
-  color: #1e40af;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 1000px) {
-  .topics-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* =========================
+   BUILD SECTION
+========================= */
+
+.curriculum-build {
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #f5f3ff, #ffffff);
+  text-align: center;
+}
+
+.curriculum-build h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #4c1d95;
+  margin-bottom: 0.6rem;
+}
+
+.build-subtitle {
+  color: #6b6f88;
+  max-width: 620px;
+  margin: 0 auto 3.5rem;
+  font-size: 1.05rem;
+}
+
+/* GRID */
+
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CARD */
+
+.build-card {
+  background: white;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.08);
+  transition:
+  transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+
+.build-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(124, 58, 237, 0.2);
+}
+
+/* FEATURED CARD */
+
+.build-card.featured {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  color: white;
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.35);
+}
+
+.build-card.featured p {
+  color: #ede9fe;
+}
+
+/* ICON */
+
+.build-icon {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+/* TEXT */
+
+.build-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.build-card p {
+  font-size: 0.95rem;
+  color: #5b5f7a;
+  line-height: 1.6;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .curriculum-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .curriculum-build h2 {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 600px) {
-  .topics-grid {
-    grid-template-columns: 1fr;
+  .nav-links a {
+    margin-left: 1rem;
   }
-}
-.register-btn {
-  background: linear-gradient(135deg, #3b82f6, #60a5fa);
-  color: #ffffff !important;
-  padding: 0.65rem 1.6rem;
-  border-radius: 14px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-/* Glow / animated gradient overlay */
-.register-btn::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 210%;
-  height: 225%;
-  background: linear-gradient(60deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
-  transform: rotate(45deg) scale(0);
-  transition: transform 0.5s ease;
-  z-index: 0;
-  border-radius: 14px;
-}
-
-/* Hover effect */
-.register-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.45);
-}
-
-.register-btn:hover::before {
-  transform: rotate(45deg) scale(1);
-}
-
-/* Ensure text stays above hover overlay */
-.register-btn span {
-  position: relative;
-  z-index: 1;
+  .curriculum-hero {
+    padding-top: 4rem;
+  }
 }

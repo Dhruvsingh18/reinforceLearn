@@ -18,8 +18,9 @@
   align-items: center;
   z-index: 50;
 }
+
 .register-btn {
-  background: linear-gradient(135deg, #3b82f6, #60a5fa);
+  background: linear-gradient(135deg, #7c3aed, #a78bfa);
   color: #ffffff !important;
   padding: 0.65rem 1.6rem;
   border-radius: 14px;
@@ -53,7 +54,7 @@
 /* Hover effect */
 .register-btn:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.45);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.45);
 }
 
 .register-btn:hover::before {
@@ -65,6 +66,7 @@
   position: relative;
   z-index: 1;
 }
+
 .nav-logo {
   font-weight: 700;
   font-size: 1.2rem;
@@ -80,11 +82,11 @@
 }
 
 .nav-links a:hover {
-  color: #2563eb;
+  color: #7c3aed;
 }
 
 .nav-links .active {
-  color: #2563eb;
+  color: #7c3aed;
   font-weight: 600;
 }
 
@@ -93,12 +95,20 @@
 .contact-hero {
   text-align: center;
   padding: 5rem 8%;
+  margin-bottom:-80px;
+}
+
+.contact-info h1{
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #5b21b6;
+  margin-bottom: 0.5rem;
 }
 
 .contact-hero h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #1e3a8a;
+  color: #5b21b6;
   margin-bottom: 1rem;
 }
 
@@ -122,8 +132,8 @@
 }
 
 .success-message {
-  background: #d1fae5;
-  color: #065f46;
+  background: #ede9fe;
+  color: #5b21b6;
   padding: 1rem 1.5rem;
   border-radius: 12px;
   margin-bottom: 1.5rem;
@@ -145,12 +155,12 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.12);
 }
 
 .contact-form button {
-  background: #2563eb;
+  background: #7c3aed;
   color: white;
   font-weight: 600;
   padding: 0.9rem 1.5rem;
@@ -161,7 +171,7 @@
 }
 
 .contact-form button:hover {
-  background: #1e40af;
+  background: #5b21b6;
   transform: translateY(-2px);
 }
 
@@ -171,12 +181,12 @@
   background: white;
   border-radius: 20px;
   padding: 2rem 1.5rem;
-  box-shadow: 0 18px 50px rgba(37, 99, 235, 0.05);
+  box-shadow: 0 18px 50px rgba(124, 58, 237, 0.05);
   height: fit-content;
 }
 
 .contact-info h3 {
-  color: #1e3a8a;
+  color: #5b21b6;
   margin-bottom: 1rem;
 }
 

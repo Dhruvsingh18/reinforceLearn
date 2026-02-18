@@ -1,85 +1,123 @@
 import "./curric.css";
 import { Link } from "react-router-dom";
 
-
 export default function CurriculumPage() {
   const topics = [
     {
-      title: "Robotics & Automation",
+      title: "How AI Learns",
       description:
-        "Learn how AI powers robots in factories, homes, and research labs.",
-      link: "https://example.com/robotics",
+        "See how computers learn by trying things, making mistakes, and improving over time.",
     },
     {
-      title: "Computer Vision",
+      title: "Making Smart Choices",
       description:
-        "Train AI systems to see and interpret the world using images and videos.",
-      link: "https://example.com/computer-vision",
+        "Understand how agents decide what action to take in different situations.",
     },
     {
-      title: "Reinforcement Learning",
+      title: "Learning From Rewards",
       description:
-        "Explore agents that learn by interacting with environments in real-time.",
-      link: "https://example.com/rl",
+        "Teach agents to maximize rewards and avoid bad decisions.",
     },
     {
-      title: "Natural Language Processing",
+      title: "AI + Neural Networks",
       description:
-        "Understand how AI interprets, generates, and responds to human language.",
-      link: "https://example.com/nlp",
+        "Combine reinforcement learning with neural networks for complex tasks.",
     },
     {
-      title: "Autonomous Vehicles",
+      title: "Improving Strategies",
       description:
-        "Learn how self-driving cars and drones navigate using AI decision-making.",
-      link: "https://example.com/autonomous",
+        "Train agents to refine behavior step-by-step using policy updates.",
     },
     {
-      title: "Healthcare AI",
+      title: "Teamwork Between AIs",
       description:
-        "Discover AI applications in diagnostics, treatment recommendations, and medical imaging.",
-      link: "https://example.com/healthcare",
+        "Explore multi-agent systems where AIs cooperate or compete.",
     },
   ];
 
   return (
     <div className="curriculum-page">
 
-      {/* NAVBAR */}
-      <nav className="about-nav">
-        <div className="nav-logo">RL Explorer</div>
-        <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/curriculum">Curriculum</Link>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/contact">Contact</Link>
-          <a href="/register" className="register-btn">
-  <span>Register</span>
-</a>
+      {/* NAVBAR (same as other pages) */}
+      <nav className="flex justify-between items-center px-10 py-6 border-b border-slate-200">
+        <div className="text-2xl font-extrabold tracking-tight">
+          Reinforce<span className="text-purple-600">Learn</span>
+        </div>
+
+        <div className="flex gap-8 items-center text-sm font-medium">
+          <Link to="/" className="hover:text-purple-600 transition">Home</Link>
+          <Link to="/about" className="hover:text-purple-600 transition">About</Link>
+          <Link to="/curriculum" className="text-purple-600 font-semibold">Curriculum</Link>
+          <Link to="/faq" className="hover:text-purple-600 transition">FAQ</Link>
+          <Link to="/contact" className="hover:text-purple-600 transition">Contact</Link>
+
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfg_XnvHbtXL7DIj9r5IzR5sFTLEaBDjG_36csNadD_ZBGS8g/viewform?usp=sharing&ouid=115457538230363493907"
+            className="bg-purple-600 text-white px-5 py-2 rounded-full shadow hover:bg-purple-700 transition"
+          >
+            Register
+          </a>
         </div>
       </nav>
 
       {/* HERO */}
       <section className="curriculum-hero">
-        <h1>Our AI Curriculum</h1>
+        <h1>Reinforcement Learning Curriculum</h1>
         <p>
-          Explore real-world applications of AI and choose the topics you want to dive into.
+          Learn how intelligent agents think, adapt, and make decisions through
+          experience, rewards, and environment interaction.
         </p>
       </section>
 
-      {/* TOPICS GRID */}
+      {/* TOPICS */}
       <section className="topics-grid">
         {topics.map((topic, i) => (
           <div className="topic-card" key={i}>
             <h3>{topic.title}</h3>
             <p>{topic.description}</p>
-            <a href={topic.link} target="_blank" rel="noopener noreferrer" className="arrow-link">
-              →
-            </a>
+            <span className="arrow">→</span>
           </div>
         ))}
       </section>
+
+      {/* BUILD SECTION */}
+      <section className="curriculum-build">
+        <h2>What You’ll Build</h2>
+        <p className="build-subtitle">
+          You won’t just learn theory — you’ll create real intelligent systems.
+        </p>
+
+        <div className="build-grid">
+          <div className="build-card">
+            <div className="build-icon">🤖</div>
+            <h3>Autonomous Agent</h3>
+            <p>
+              Train an agent to explore and navigate environments while improving
+              through reward signals.
+            </p>
+          </div>
+
+          <div className="build-card featured">
+            <div className="build-icon">🧠</div>
+            <h3>Deep RL System</h3>
+            <p>
+              Build neural network agents that solve advanced control tasks.
+            </p>
+          </div>
+
+          <div className="build-card">
+            <div className="build-icon">🏁</div>
+            <h3>Multi-Agent System</h3>
+            <p>
+              Create competitive or cooperative AI environments with multiple agents.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer className="about-footer">
+        © {new Date().getFullYear()} ReinforceLearn — Reinforcement Learning, Reimagined.
+      </footer>
 
     </div>
   );
